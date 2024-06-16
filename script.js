@@ -56,7 +56,15 @@ function displaySearchResults(results, count) {
         resultElement.innerHTML = '<img src="https://entrackr.com/storage/2023/10/Codingninjas-800x400.jpg" class="headingimg2 resultimg3" style=" max-height: 65px;    object-fit: cover;">';
     
     if (!results || !results.web || results.web.length === 0) {
-        resultElement.innerHTML += '<p>No results found</p>';
+        resultElement.innerHTML += `<p>
+    <div style="max-width: 600px; margin: 50px auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9; font-family: Arial, sans-serif;">
+        <h1 style="color: #d9534f; font-size: 24px;">Notification: Request Limit Exceeded</h1>
+        <p style="font-size: 16px; color: #333;">Dear User,</p>
+        <p style="font-size: 16px; color: #333;">We apologize for the inconvenience, but the request limit for our service has been temporarily exceeded by another user. Please try again later.</p>
+        <p style="margin-top: 20px; font-size: 14px; color: #777;">Thank you for your understanding and patience.</p>
+        <p style="margin-top: 20px; font-size: 14px; color: #777;">Best regards,<br>Gaurav Kumar</p>
+    </div>
+</p>`;
         return;
     }
 
